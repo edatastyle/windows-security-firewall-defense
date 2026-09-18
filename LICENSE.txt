@@ -1,0 +1,11 @@
+Copyright (c) 2024-2026 aThemeArt
+
+Developed by: aThemeArt
+Website: https://athemeart.com
+Author: Saiful Islam
+
+All rights reserved.
+
+This software is provided for legitimate security hardening of systems you own
+or are authorized to administer. Use responsibly and in accordance with
+applicable laws.
