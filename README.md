@@ -10,11 +10,11 @@ It is designed to make common firewall and security-management tasks easier to u
 
 ## Overview
 
-Security Firewall Defense provides a centralized interface for Windows users who want better visibility into firewall and security activity.
+Security Firewall Defense provides a centralized graphical interface for Windows users who want better visibility into firewall and security activity.
 
 The application is based on the project's **PowerShell security and firewall logic**, with a graphical interface intended to make those capabilities easier to access.
 
-Instead of requiring users to work directly with command-line tools, the application can provide visual access to information such as:
+Instead of requiring users to work directly with command-line tools, the application provides visual access to information such as:
 
 * Windows Firewall status
 * Allowed applications
@@ -24,7 +24,7 @@ Instead of requiring users to work directly with command-line tools, the applica
 * Configuration information
 * Security events and warnings
 
-The application is intended for both everyday Windows users and developers/security enthusiasts who want a convenient way to inspect and manage firewall-related information.
+The application is intended for everyday Windows users, system administrators, developers, and security enthusiasts who want a convenient way to inspect and manage firewall-related information.
 
 ---
 
@@ -34,8 +34,8 @@ Security Firewall Defense is designed to provide:
 
 * 🛡️ **Visual security monitoring** — View important firewall and security information through a graphical interface.
 * 🖥️ **GUI-based management** — Perform supported tasks without manually entering PowerShell commands.
-* 📋 **Allowed application management** — Review and manage applications that are permitted by the application's configuration.
-* 🚫 **Malicious IP management** — Maintain a list of IP addresses that should be treated as malicious or blocked by the application's security logic.
+* 📋 **Allowed application management** — Review and manage applications permitted by the application's configuration.
+* 🚫 **Malicious IP management** — Maintain IP addresses that should be treated as malicious or blocked by the application's security logic.
 * 📜 **Security and firewall logs** — Review activity and troubleshooting information.
 * 🔎 **Improved visibility** — Make blocked or suspicious network activity easier to investigate.
 * 📊 **Centralized information** — Bring relevant security information into one interface.
@@ -48,7 +48,7 @@ Security Firewall Defense should be considered an additional management and visi
 
 ## Features
 
-Depending on the installed version and Windows configuration, Security Firewall Defense may provide the following features:
+Depending on the installed version and Windows configuration, Security Firewall Defense may provide the following features.
 
 ### Windows Firewall Monitoring
 
@@ -93,11 +93,11 @@ Where supported by the installed version:
 * Search configuration entries.
 * Filter application information.
 * Filter IP addresses.
-* Find relevant log entries more quickly.
+* Find relevant log entries quickly.
 
 ### Security Dashboard
 
-The dashboard is designed to provide a centralized overview of supported security and firewall information.
+The dashboard provides a centralized overview of supported security and firewall information.
 
 ### Configuration Management
 
@@ -110,39 +110,59 @@ The dashboard is designed to provide a centralized overview of supported securit
 
 ---
 
-## Screenshots
+# 📸 Screenshots
 
-Screenshots can be added here as the graphical interface develops.
+## Security Firewall Defense Dashboard
 
-### Dashboard
+The main dashboard provides a visual overview of firewall status, security activity, network protection, and important system information.
 
-```text
-[ Screenshot: Security Firewall Defense Dashboard ]
-```
-
-### Allowed Applications
-
-```text
-[ Screenshot: Allowed Applications Management ]
-```
-
-### Malicious IPs
-
-```text
-[ Screenshot: Malicious IP Management ]
-```
-
-### Security Logs
-
-```text
-[ Screenshot: Security / Firewall Log Viewer ]
-```
+![Security Firewall Defense Dashboard](screenshots/dashboard.png)
 
 ---
 
-## System Requirements
+## Allowed Applications
 
-### Operating System
+Review and manage applications configured as allowed by Security Firewall Defense.
+
+![Allowed Applications](screenshots/allowed-applications.png)
+
+---
+
+## Malicious IP Addresses
+
+View and manage IP addresses configured as malicious or blocked by the application's security logic.
+
+![Malicious IP Addresses](screenshots/malicious-ips.png)
+
+---
+
+## Security and Firewall Logs
+
+Review security events, firewall activity, errors, and troubleshooting information through the graphical log viewer.
+
+![Security Firewall Logs](screenshots/security-logs.png)
+
+---
+
+## Screenshot Directory
+
+The screenshots used by this README are stored in:
+
+```text
+screenshots/
+├── dashboard.png
+├── allowed-applications.png
+├── malicious-ips.png
+└── security-logs.png
+```
+
+Make sure these files are committed to the GitHub repository using the exact filenames and directory structure above.
+
+---
+
+# System Requirements
+
+## Operating System
 
 Security Firewall Defense is intended for supported versions of:
 
@@ -151,7 +171,7 @@ Security Firewall Defense is intended for supported versions of:
 
 The exact minimum Windows build should be documented for each release if a future version introduces a specific Windows API requirement.
 
-### Architecture
+## Architecture
 
 The release architecture should be specified with each published build:
 
@@ -163,13 +183,13 @@ The release architecture should be specified with each published build:
 
 > Do not assume that an x64 build is compatible with every Windows architecture. Download the release appropriate for your system.
 
-### Permissions
+## Permissions
 
 Some operations require **Administrator privileges** because Windows restricts access to firewall configuration and other security-sensitive system resources.
 
 The application may therefore request a Windows User Account Control (UAC) confirmation.
 
-### Dependencies
+## Dependencies
 
 End users should not need to install:
 
@@ -194,23 +214,17 @@ For normal users, use the official Windows installer from the project's release 
 ### Installation Steps
 
 1. Download the latest release from the project's trusted release source.
-
 2. Run:
 
-   ```text
-   SecurityFirewallDefense_Setup_<version>.exe
-   ```
+```text
+SecurityFirewallDefense_Setup_<version>.exe
+```
 
 3. If Windows displays a User Account Control prompt, review the publisher/application information and choose **Yes** if you trust the installation source.
-
 4. Follow the installation wizard.
-
 5. Accept the license/terms if applicable.
-
 6. Choose the installation location.
-
 7. Complete the installation.
-
 8. Launch **Security Firewall Defense** from the Start Menu or desktop shortcut.
 
 The normal user should **not** need to manually run the project's PowerShell script.
@@ -228,8 +242,6 @@ The exact location can be changed during installation if supported by the instal
 ---
 
 # Uninstallation
-
-Security Firewall Defense can normally be removed using Windows:
 
 ### Windows 11
 
@@ -312,7 +324,7 @@ allowed-apps.txt
 
 to maintain its application allowlist.
 
-A typical entry may identify an application path, for example:
+A typical entry may identify an application path:
 
 ```text
 C:\Program Files\Example\Application.exe
@@ -321,7 +333,7 @@ C:\Program Files\Example\Application.exe
 ### Adding an Application
 
 1. Open **Allowed Applications**.
-2. Select the option to add an application.
+2. Select **Add Application**.
 3. Choose the executable.
 4. Review the application path.
 5. Confirm the change.
@@ -348,7 +360,7 @@ malicious-ips.txt
 
 to maintain IP addresses that should be treated as malicious or blocked by the application's security logic.
 
-For example:
+Example documentation entries:
 
 ```text
 203.0.113.10
@@ -459,15 +471,6 @@ The exact location should be checked in the installed version's configuration or
 
 If manual editing is supported, close the application before changing configuration files unless the documentation for the specific release states otherwise.
 
-For example:
-
-```text
-allowed-apps.txt
-malicious-ips.txt
-```
-
-should be edited carefully.
-
 Do not:
 
 * Add invalid entries.
@@ -532,8 +535,6 @@ Try the following:
 
 Do not disable Windows security protections simply to make the application start.
 
----
-
 ## Administrator Permission Error
 
 If firewall operations fail:
@@ -545,8 +546,6 @@ If firewall operations fail:
 5. Verify that Windows Firewall is enabled and functioning normally.
 
 On managed computers, Group Policy, Microsoft Defender policies, or other enterprise security controls may prevent changes even for applications running with administrative privileges.
-
----
 
 ## Firewall Rules Cannot Be Changed
 
@@ -561,8 +560,6 @@ Possible causes include:
 
 Check Windows Event Viewer and the application log for additional information.
 
----
-
 ## Logs Are Not Being Updated
 
 Check:
@@ -576,8 +573,6 @@ Check:
 
 Avoid manually modifying the log while the application is actively writing to it.
 
----
-
 ## Configuration Files Cannot Be Modified
 
 If files cannot be changed:
@@ -589,8 +584,6 @@ If files cannot be changed:
 5. Use the application's GUI to make changes where possible.
 
 Do not modify files under `Program Files` unnecessarily. Application data should preferably be stored in an appropriate writable data directory.
-
----
 
 ## An Application Is Incorrectly Blocked
 
@@ -606,13 +599,9 @@ If a trusted application is blocked:
 
 Do not automatically allow an application simply because it is being blocked.
 
----
-
 ## Windows Defender or Another Security Product Reports a Warning
 
-Security software can sometimes report warnings for applications based on behavior, reputation, configuration, packaging, or security policies.
-
-If this happens:
+If security software reports a warning:
 
 1. Do not immediately disable Microsoft Defender or other security protections.
 2. Verify that the application came from the official project release.
@@ -625,55 +614,21 @@ Security warnings should be investigated rather than bypassed blindly.
 
 ---
 
-## Installation Problems
-
-If installation fails:
-
-1. Download the installer again from the official release source.
-2. Verify that the download completed successfully.
-3. Make sure you have permission to install software.
-4. Close other instances of the installer.
-5. Check available disk space.
-6. Check Windows Security for blocked installation activity.
-7. Restart Windows and try again.
-8. Report the installer error if the problem continues.
-
----
-
-## Uninstallation Problems
-
-If normal uninstallation fails:
-
-1. Restart Windows.
-2. Try uninstalling from Windows Settings.
-3. Try Control Panel → Programs and Features.
-4. Check whether the application is still running.
-5. Close the application and retry.
-6. Report the problem if the uninstaller continues to fail.
-
-Do not manually delete system files or firewall configuration unless the project documentation specifically instructs you to do so.
-
----
-
 # FAQ
 
-## Is Security Firewall Defense a replacement for Windows Defender?
+### Is Security Firewall Defense a replacement for Windows Defender?
 
 **No.**
 
 Security Firewall Defense is intended as a monitoring and management utility. It does not replace Microsoft Defender Antivirus or other endpoint-security products.
 
----
-
-## Does it replace Windows Firewall?
+### Does it replace Windows Firewall?
 
 **No.**
 
-The application works with or around supported Windows Firewall functionality. It is not intended to replace the Windows Firewall subsystem itself.
+The application works with supported Windows Firewall functionality. It is not intended to replace the Windows Firewall subsystem itself.
 
----
-
-## Does Security Firewall Defense guarantee protection from malware?
+### Does Security Firewall Defense guarantee protection from malware?
 
 **No.**
 
@@ -681,17 +636,13 @@ No single application can guarantee protection against every malware sample, att
 
 Security Firewall Defense is intended to improve visibility and assist with firewall/security management.
 
----
-
-## Why does the application require Administrator privileges?
+### Why does the application require Administrator privileges?
 
 Some Windows Firewall and security operations are restricted by Windows and require elevated privileges.
 
 The application may therefore request UAC elevation when performing operations that require administrative access.
 
----
-
-## Can I manually edit the configuration files?
+### Can I manually edit the configuration files?
 
 If manual configuration is supported by the installed release, files such as:
 
@@ -706,9 +657,7 @@ However, the GUI is preferred where available because it can validate and manage
 
 Always make a backup before manually changing configuration files.
 
----
-
-## Where are the logs stored?
+### Where are the logs stored?
 
 The application may maintain:
 
@@ -720,11 +669,7 @@ inside its configured data/log directory.
 
 The exact location may vary by release and installation configuration.
 
-Check the application's configuration or log viewer for the current location.
-
----
-
-## How can I report a problem?
+### How can I report a problem?
 
 For normal bugs and feature requests, open a GitHub Issue in the project's repository.
 
@@ -743,11 +688,11 @@ Remove passwords, tokens, personal information, internal IP addresses, or other 
 
 ---
 
-# Contributing
+# 🤝 Contributing
 
 Contributions from developers, Windows enthusiasts, security researchers, testers, documentation writers, and translators are welcome.
 
-Useful contributions include:
+We would especially appreciate contributions in:
 
 * Bug fixes
 * UI/UX improvements
@@ -771,8 +716,6 @@ Create your own fork of the GitHub repository.
 
 ### 2. Clone the Repository
 
-Example:
-
 ```powershell
 git clone https://github.com/<your-account>/SecurityFirewallDefense.git
 cd SecurityFirewallDefense
@@ -794,13 +737,11 @@ git checkout -b fix/firewall-monitoring
 
 ### 4. Set Up the Development Environment
 
-Create a Python virtual environment:
-
 ```powershell
 py -m venv .venv
 ```
 
-Activate it:
+Activate the environment:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -848,8 +789,6 @@ Security-sensitive changes should receive additional testing.
 
 ### 7. Commit Your Changes
 
-Use a clear commit message:
-
 ```powershell
 git add .
 git commit -m "Improve firewall event monitoring"
@@ -870,7 +809,7 @@ Please explain:
 * What changed.
 * Why the change was needed.
 * How it was tested.
-* Any Windows versions tested.
+* Which Windows versions were tested.
 * Any security implications.
 * Any configuration changes required.
 
@@ -924,8 +863,14 @@ SecurityFirewallDefense/
 │   ├── build_installer.bat
 │   └── output/
 │
+├── screenshots/
+│   ├── dashboard.png
+│   ├── allowed-applications.png
+│   ├── malicious-ips.png
+│   └── security-logs.png
+│
 ├── requirements.txt
-├── .venv/
+├── LICENSE
 └── README.md
 ```
 
@@ -933,52 +878,13 @@ The exact structure may change as the project develops.
 
 ---
 
-## Development Requirements
-
-Typical development tools include:
-
-* Windows 10 or Windows 11
-* Python
-* Git
-* PyInstaller
-* Inno Setup
-* Administrator access for testing firewall-related functionality
-
-The exact Python version should be specified by the project when a minimum version is established.
-
----
-
-## Running from Source
-
-Activate the virtual environment:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Install dependencies:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-Run the application:
-
-```powershell
-python src\main.py
-```
-
-Some features may require an elevated PowerShell or Administrator terminal during development.
-
----
-
 # Building the Windows Application
 
-The project uses PyInstaller to package the Python application.
+The project can use **PyInstaller** to package the Python application.
 
-The build process packages the Python runtime and required Python dependencies so end users do not need to install Python.
+Build scripts may be provided with the project.
 
-Run:
+For example:
 
 ```powershell
 .\scripts\build_exe.bat
@@ -1007,9 +913,9 @@ The exact output depends on the current PyInstaller configuration.
 
 # Creating the Windows Installer
 
-The project uses **Inno Setup** to create the Windows installer.
+The project can use **Inno Setup** to create the Windows installer.
 
-After successfully building and testing the application, run:
+After successfully building and testing the application:
 
 ```powershell
 .\installer\build_installer.bat
@@ -1054,7 +960,7 @@ Before publishing a new version:
 * [ ] Verify application branding.
 * [ ] Code-sign release binaries when signing infrastructure is available.
 * [ ] Test the installer on a clean Windows system.
-* [ ] Update the changelog/release notes.
+* [ ] Update release notes.
 * [ ] Create the GitHub release.
 * [ ] Upload the final installer.
 
@@ -1084,8 +990,6 @@ Relevant log information:
 
 Do not include sensitive personal or system information.
 
----
-
 ## Security Vulnerabilities
 
 **Do not publicly disclose sensitive vulnerability details in a normal GitHub Issue.**
@@ -1099,30 +1003,6 @@ Examples include:
 * A private vulnerability-reporting system
 
 If no private reporting mechanism has been configured yet, the project maintainers should establish one before requesting detailed vulnerability reports.
-
-When reporting a vulnerability privately, provide enough information to reproduce and investigate the issue, while avoiding unnecessary disclosure of sensitive data.
-
----
-
-# Security Notice
-
-Security Firewall Defense interacts with Windows security and firewall functionality.
-
-Incorrect configuration can affect network connectivity or application access.
-
-Users should:
-
-* Understand changes before applying them.
-* Keep backups of important configuration.
-* Avoid blindly allowing applications.
-* Avoid blindly blocking IP addresses.
-* Keep Windows security features enabled.
-* Keep Microsoft Defender/security software updated.
-* Use trusted application releases.
-* Review unexpected security events.
-* Report suspected vulnerabilities through the appropriate private channel.
-
-The project does not guarantee that every malicious application, network connection, vulnerability, or security threat will be detected or blocked.
 
 ---
 
@@ -1163,7 +1043,7 @@ See the `LICENSE` file for details.
 
 ## Security Firewall Defense
 
-**Developed by aThemeArt**
+**Developed by [aThemeArt](https://athemeart.com)**
 
 **Author:** Saiful Islam
 
@@ -1181,7 +1061,7 @@ When requesting support, provide useful technical information while removing pas
 
 ---
 
-## Disclaimer
+# Disclaimer
 
 Security Firewall Defense is provided as a security and firewall monitoring/management utility. Users are responsible for reviewing and understanding security configuration changes made through the application.
 
